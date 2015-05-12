@@ -17,7 +17,7 @@ from django.conf.urls import patterns, url
 from django.contrib.auth import views
 
 
-template_name = {'template_name': 'rest_framework/login.html'}
+template_name = {'template_name': 'rest_framework_3/login.html'}
 
 urlpatterns = patterns(
     '',

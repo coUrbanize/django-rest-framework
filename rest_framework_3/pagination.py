@@ -226,7 +226,7 @@ class PageNumberPagination(BasePagination):
 
     last_page_strings = ('last',)
 
-    template = 'rest_framework/pagination/numbers.html'
+    template = 'rest_framework_3/pagination/numbers.html'
 
     invalid_page_message = _('Invalid page "{page_number}": {message}.')
 
@@ -384,7 +384,7 @@ class LimitOffsetPagination(BasePagination):
     limit_query_param = 'limit'
     offset_query_param = 'offset'
     max_limit = None
-    template = 'rest_framework/pagination/numbers.html'
+    template = 'rest_framework_3/pagination/numbers.html'
 
     def paginate_queryset(self, queryset, request, view=None):
         self.limit = self.get_limit(request)
@@ -491,7 +491,7 @@ class CursorPagination(BasePagination):
     page_size = api_settings.PAGE_SIZE
     invalid_cursor_message = _('Invalid cursor')
     ordering = '-created'
-    template = 'rest_framework/pagination/previous_and_next.html'
+    template = 'rest_framework_3/pagination/previous_and_next.html'
 
     def paginate_queryset(self, queryset, request, view=None):
         if self.page_size is None:
